@@ -1,119 +1,191 @@
 \chapter{Supplementary figures}
 
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-1}
-\end{figure}
+\tikzstyle{my-box}=[rectangle,
+    draw=hidden-draw,
+    rounded corners,
+    text opacity=1,
+    minimum height=1.5em,
+    minimum width=5em,
+    inner sep=2pt,
+    align=center,
+    fill opacity=.5,
+    line width=0.8pt,
+]
+\tikzstyle{leaf}=[my-box, minimum height=1.5em,
+    fill=hidden-pink!80, text=black, align=left,font=\normalsize,
+    inner xsep=2pt,
+    inner ysep=4pt,
+    line width=0.8pt,
+]
 
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-2}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-3}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-4}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-5}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-6}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-7}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-8}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-9}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-10}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-11}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-12}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}
-    \draw (0,0) -- (1, 0) -- (1, 1) -- cycle;
-  \end{tikzpicture}
-  \caption{An example tikz picture with a short caption.}
-  \label{fig:tikz-example-13}
-\end{figure}
-
+\begin{figure*}[!t]
+\centering
+\resizebox{0.99\linewidth}{!}{
+\begin{forest}
+    forked edges,
+    for tree={
+        grow=east,
+        reversed=true,
+        anchor=base west,
+        parent anchor=east,
+        child anchor=west,
+        base=center,
+        font=\footnotesize,
+        rectangle,
+        draw=hidden-draw,
+        rounded corners,
+        align=left,
+        text centered,
+        minimum width=4em,
+        edge+={darkgray, line width=1pt},
+        s sep=3pt,
+        inner xsep=2pt,
+        inner ysep=3pt,
+        line width=0.8pt,
+        ver/.style={rotate=90, child anchor=north, parent anchor=south, anchor=center},
+    },
+    where level=1{text width=14em,font=\normalsize,}{},
+    where level=2{text width=12em,font=\normalsize,}{},
+    where level=3{text width=15em,font=\footnotesize,}{},
+    [
+        Accelerated Sampling for Video Diffusion, ver
+        [
+            Step Distillation
+            [
+                Autoregressive/forcing distillation -- long/streaming, leaf, text width=22em,
+                content={Rolling Forcing; TalkingMachines; Ca2-VDM; FIFO-Diffusion; LTX-Video; Self-Forcing++}
+            ]
+            [
+                Autoregressive/forcing distillation, leaf, text width=18em,
+                content={InstructVideo; Diffused Heads; Diffusion Probabilistic Modeling for Video Generation; Real-Time Motion-Controllable AR VDM}
+            ]
+            [
+                Consistency / one-step distillation, leaf, text width=18em,
+                content={Motion Consistency Model; DCM; VideoLCM; Taming Consistency Distillation; DanceLCM}
+            ]
+            [
+                Adversarial distillation, leaf, text width=18em,
+                content={Diffusion APT; Adversarial Distribution Matching; OS-DiffVSR; AccVideo}
+            ]
+            [
+                Distribution-matching distillation, leaf, text width=18em,
+                content={Reward Forcing; Trajectory Distribution Matching; BLADE (DM branch)}
+            ]
+        ]
+        [
+            Attention Efficiency
+            [
+                Sparse Attention
+                [
+                    Routing / dynamic sparsity, leaf, text width=17em,
+                    content={VORTA; USV; Input-Aware Sparse Attention; Mixture of Contexts}
+                ]
+                [
+                    Block/window sparsity, leaf, text width=15em,
+                    content={Open-Sora; Radial Attention; Photorealistic VDM; MotionStream}
+                ]
+                [
+                    Causal sparse streaming, leaf, text width=14em,
+                    content={TalkingMachines; ViD-GPT}
+                ]
+                [
+                    Generic sparse attention, leaf, text width=14em,
+                    content={Re-ttention; Tune-A-Video; MM-Diffusion}
+                ]
+            ]
+            [
+                Linear Attention
+                [
+                    Linear attention, leaf, text width=13em,
+                    content={SANA-Video; LINVIDEO; SLA}
+                ]
+                [
+                    SSM / linear attention, leaf, text width=13em,
+                    content={SSM Meets Video Diffusion Models}
+                ]
+            ]
+        ]
+        [
+            Model Compression
+            [
+                Quantization
+                [
+                    QAT / distillation-aware quantization, leaf, text width=17em,
+                    content={QuantSparse; QVGen; FPSAttention; Q-VDiT}
+                ]
+                [
+                    Rotation-aware quantization, leaf, text width=14em,
+                    content={DVD-Quant; TR-DQ}
+                ]
+                [
+                    Post-training quantization, leaf, text width=14em,
+                    content={Q-DiT; ViDiT-Q}
+                ]
+                [
+                    Saliency-aware quantization, leaf, text width=14em,
+                    content={S$^2$Q-VDiT}
+                ]
+                [
+                    Generic quantization, leaf, text width=14em,
+                    content={Diffusion Model Quantization (survey)}
+                ]
+            ]
+            [
+                Pruning
+                [
+                    Token/frame pruning, leaf, text width=14em,
+                    content={AsymRnR; Sparse Video Tubes; UniCP}
+                ]
+                [
+                    Channel/head pruning, leaf, text width=14em,
+                    content={Mobile Video Diffusion}
+                ]
+            ]
+        ]
+        [
+            System \& Trajectory Tricks
+            [
+                Caching / Reuse
+                [
+                    KV/feature caching, leaf, text width=16em,
+                    content={LightCache; Ca2-VDM; Less is Enough; FasterCache}
+                ]
+                [
+                    Streaming cache reuse, leaf, text width=14em,
+                    content={StreamDiffusionV2}
+                ]
+            ]
+            [
+                Latent Trajectory Tricks
+                [
+                    Noise rescheduling, leaf, text width=12em,
+                    content={FreeNoise}
+                ]
+                [
+                    Latent shift/trajectory simplification, leaf, text width=16em,
+                    content={TokenFlow; Latent-Shift; Motion-latent Decomposition}
+                ]
+                [
+                    Parallel/patch composition, leaf, text width=15em,
+                    content={DiffCollage; ControlVideo}
+                ]
+            ]
+            [
+                Flow/Score Matching
+                [
+                    Flow matching sampling, leaf, text width=13em,
+                    content={Pyramidal Flow Matching; FlashVideo}
+                ]
+            ]
+            [
+                Other efficiency tricks, leaf, text width=14em,
+                content={LTX-Video; Understanding Attention in VDMs; Efficient VDMs (survey)}
+            ]
+        ]
+    ]
+\end{forest}
+}
+\caption{Taxonomy of accelerated sampling methods for video diffusion models based on the classified corpus (leaves show representative examples; citations to be added).}
+\Description{A tree summarizing step distillation families, attention efficiency, model compression, caching/trajectory techniques, and related efficiency tricks for video diffusion models.}
+\label{fig:video-accel-taxonomy}
+\end{figure*}
